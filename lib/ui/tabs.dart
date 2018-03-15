@@ -47,17 +47,17 @@ class MyTabsState extends State<MyTabs> {
       },
       items: <BottomNavigationBarItem>[
         new BottomNavigationBarItem( 
-          backgroundColor: Colors.redAccent,
+          backgroundColor: new Color.fromRGBO(255, 22, 65, 10.0),
           icon: new Icon(Icons.event_available),
           title: new Text("Schedule")
         ),
         new BottomNavigationBarItem( 
-          backgroundColor: Colors.redAccent,
+          backgroundColor: new Color.fromRGBO(255, 22, 65, 10.0),
           icon: new Icon(Icons.group),
           title: new Text("Speakers")
         ),
         new BottomNavigationBarItem( 
-          backgroundColor: Colors.redAccent,
+          backgroundColor: new Color.fromRGBO(255, 22, 65, 10.0),
           icon: new Icon(Icons.monetization_on),
           title: new Text("Sponsers")
         )

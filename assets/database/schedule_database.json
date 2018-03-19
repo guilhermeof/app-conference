@@ -1,0 +1,14 @@
+{
+    
+
+                        "id": 1,
+                        "name": "Introdução ao Flutter",
+                        "local": "Sala 211",
+                        "descricao": "Descrição",
+                        "palestrantes": ["Ellie Elephant"],
+                        "inicio": "8:30 am",
+                        "termino": "9:30 am",
+                        "sessoes": [{
+                            "name":"Introdução ao Flutter 2"
+                        }]
+}

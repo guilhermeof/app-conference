@@ -1,4 +1,8 @@
+import 'dart:async';
+import 'package:flutter/services.dart';
+
 import 'package:flutter/material.dart';
+import 'dart:convert';
 
 class SchedulePage extends StatefulWidget {
   @override
@@ -8,12 +12,12 @@ class SchedulePage extends StatefulWidget {
 class _SchedulePageState extends State<SchedulePage> with SingleTickerProviderStateMixin {
 
   TabController controller;
-  final length = choices.length;
+  final length = schedules.length;
 
   @override
   void initState() {
     super.initState();
-    controller = new TabController(vsync: this, length: length);
+    controller = new TabController(vsync: this, length: 5);
   }
 
   @override
@@ -56,7 +60,7 @@ class _SchedulePageState extends State<SchedulePage> with SingleTickerProviderSt
                     ),
                   controller: controller,
                   isScrollable: true,
-                  tabs: choices.map((Choice choice) {
+                  tabs: schedules.map((Schedule schedules) {
                   return new Tab(
                       child: new Align(
                         alignment: Alignment.bottomCenter,
@@ -65,7 +69,7 @@ class _SchedulePageState extends State<SchedulePage> with SingleTickerProviderSt
                           child: new Column(
                           mainAxisSize: MainAxisSize.min,
                           children: <Widget>[
-                              new Text(choice.title.toUpperCase()),
+                              new Text(schedules.name.toUpperCase()),
                               new Text("AUG".toUpperCase())
                             ],
                           )
@@ -79,10 +83,10 @@ class _SchedulePageState extends State<SchedulePage> with SingleTickerProviderSt
           ),
           body: new TabBarView(
             controller: controller,
-            children: choices.map((Choice choice) {
+            children: schedules.map((Schedule schedule) {
               return new Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: new ChoiceCard(choice: choice),
+                child: new ScheduleCard(schedule: schedule),
               );
             }).toList(),
           ),
@@ -90,27 +94,68 @@ class _SchedulePageState extends State<SchedulePage> with SingleTickerProviderSt
   }
 }
 
-class Choice {
-  const Choice({ this.title, this.icon });
-  final String title;
+class Schedule {
+  
+  final String name;
+  final String local;
+  final String descricao;
+  final Object palestrantes;
+  final String inicio;
+  final String termino;
   final IconData icon;
+  final Widget child;
+  
+  Schedule({
+     this.name,
+     this.local, 
+     this.descricao, 
+     this.palestrantes, 
+     this.inicio,
+     this.termino,
+     this.icon,
+     this.child
+      });
+ 
 }
 
-const List<Choice> choices = const <Choice>[
-  const Choice(title: '1', icon: Icons.filter_1),
-  const Choice(title: '2', icon: Icons.filter_1),
-  const Choice(title: '3', icon: Icons.filter_1),
-  const Choice(title: '4', icon: Icons.filter_1),
-  const Choice(title: '5', icon: Icons.filter_1),
+// void _parseJsonForCrossword(String jsonString) {
+//   Map decoded = JSON.decode(jsonString);
+
+//   String name = decoded["name"];
+
+//   for (var item in decoded["sessoes"]) {
+//     print(item["name"]);
+//   }
+// }
+
+// Future<String> _loadCrosswordAsset() async {
+//   return await rootBundle.loadString('assets/database/schedule_database.json');
+// }
+
+// Future loadCrossword() async {
+//   String jsonCrossword = await _loadCrosswordAsset();
+//    _parseJsonForCrossword(jsonCrossword);
+// }
+
+
+List<Schedule> schedules = <Schedule>[
+  new Schedule(name: '2', 
+  child: new Container(
+     child: new Center(
+       child: new Text("data"),),)),
+  new Schedule(name: '3', icon: Icons.filter_1),
+  new Schedule(name: '4', icon: Icons.filter_1),
+  new Schedule(name: '5', icon: Icons.filter_1),
 ];
 
-class ChoiceCard extends StatelessWidget {
-  const ChoiceCard({ Key key, this.choice }) : super(key: key);
+class ScheduleCard extends StatelessWidget {
+  const ScheduleCard({ Key key, this.schedule }) : super(key: key);
 
-  final Choice choice;
+  final Schedule schedule;
 
   @override
   Widget build(BuildContext context) {
+    loadCrossword();
     final TextStyle textStyle = Theme.of(context).textTheme.display1;
     return new Card(
       color: Colors.white,
@@ -119,11 +164,57 @@ class ChoiceCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            new Icon(choice.icon, size: 128.0, color: textStyle.color),
-            new Text(choice.title, style: textStyle),
+            schedule.child
           ],
         ),
       ),
     );
   }
+}
+
+
+class Crossword {
+  // final int id;
+  final String name;
+  final Across across;
+
+  Crossword(this.name, this.across);
+}
+
+class Across {
+  final List<Word> words;
+
+  const Across(this.words);
+}
+
+class Word {
+  // final int number;
+  final String name;
+
+  const Word(this.name);
+}
+
+Future<String> _loadCrosswordAsset() async {
+  return await rootBundle.loadString('assets/database/schedule_database.json');
+}
+
+Crossword _parseJsonForCrossword(String jsonString) {
+  Map decoded = JSON.decode(jsonString);
+
+  List<Word> words = new List<Word>();
+  for (var word in decoded['sessoes']) {
+    words.add(new Word(word['name']));
+  }
+  
+  return new Crossword(decoded['name'], new Across(words));
+}
+
+Future loadCrossword() async {
+  String jsonCrossword = await _loadCrosswordAsset();
+  Crossword crossword = _parseJsonForCrossword(jsonCrossword);
+
+  // We check it's working
+  print(crossword.name);
+
+  // Crossword is loaded from JSON, do what you want with it now :-)
 }

@@ -1,14 +1,177 @@
 {
-    
-
-                        "id": 1,
-                        "name": "Introdução ao Flutter",
-                        "local": "Sala 211",
-                        "descricao": "Descrição",
-                        "palestrantes": ["Ellie Elephant"],
-                        "inicio": "8:30 am",
-                        "termino": "9:30 am",
-                        "sessoes": [{
-                            "name":"Introdução ao Flutter 2"
-                        }]
+  "schedule": [{
+    "data": "1",
+    "grupos": [{
+      "horario": "8:00 am",
+      "sessoes": [{
+        "nome": "Breakfast",
+        "inicio": "8:00 am",
+        "termino": "9:00 am",
+        "local": "Main hallway",
+        "tag": ["Food"],
+        "id": "1"
+      }]
+    }, {
+      "horario": "9:00 am",
+      "sessoes": [{
+        "nome": "Introduction to Appcamp.io",
+        "local": "Room 2203",
+        "descricao": "Descrição",
+        "palestrantes": ["Ellie Elephant"],
+        "inicio": "9:15 am",
+        "termino": "9:30 am",
+        "tag": ["Ionic"],
+        "id": "2"
+      }, {
+        "nome": "Getting started with Ionic",
+        "local": "Room 2202",
+        "descricao": "Descrição",
+        "palestrantes": ["Ted Turtle"],
+        "inicio": "9:30 am",
+        "termino": "9:45 am",
+        "tag": ["Ionic"],
+        "id": "3"
+      }]
+    }]
+  },
+    {
+      "data": "2",
+      "grupos": [{
+        "horario": "8:00 am",
+        "sessoes": [{
+          "nome": "Breakfast",
+          "inicio": "8:00 am",
+          "termino": "9:00 am",
+          "local": "Main hallway",
+          "tag": ["Food"],
+          "id": "1"
+        }]
+      }, {
+        "horario": "9:00 am",
+        "sessoes": [{
+          "nome": "Introduction to Appcamp.io",
+          "local": "Room 2203",
+          "descricao": "Descrição",
+          "palestrantes": ["Ellie Elephant"],
+          "inicio": "9:15 am",
+          "termino": "9:30 am",
+          "tag": ["Ionic"],
+          "id": "2"
+        }, {
+          "nome": "Getting started with Ionic",
+          "local": "Room 2202",
+          "descricao": "Descrição",
+          "palestrantes": ["Ted Turtle"],
+          "inicio": "9:30 am",
+          "termino": "9:45 am",
+          "tag": ["Ionic"],
+          "id": "3"
+        }]
+      }]
+    },
+    {
+      "data": "3",
+      "grupos": [{
+        "horario": "8:00 am",
+        "sessoes": [{
+          "nome": "Breakfast",
+          "inicio": "8:00 am",
+          "termino": "9:00 am",
+          "local": "Main hallway",
+          "tag": ["Food"],
+          "id": "1"
+        }]
+      }, {
+        "horario": "9:00 am",
+        "sessoes": [{
+          "nome": "Introduction to Appcamp.io",
+          "local": "Room 2203",
+          "descricao": "Descrição",
+          "palestrantes": ["Ellie Elephant"],
+          "inicio": "9:15 am",
+          "termino": "9:30 am",
+          "tag": ["Ionic"],
+          "id": "2"
+        }, {
+          "nome": "Getting started with Ionic",
+          "local": "Room 2202",
+          "descricao": "Descrição",
+          "palestrantes": ["Ted Turtle"],
+          "inicio": "9:30 am",
+          "termino": "9:45 am",
+          "tag": ["Ionic"],
+          "id": "3"
+        }]
+      }]
+    },
+    {
+      "data": "4",
+      "grupos": [{
+        "horario": "8:00 am",
+        "sessoes": [{
+          "nome": "Breakfast",
+          "inicio": "8:00 am",
+          "termino": "9:00 am",
+          "local": "Main hallway",
+          "tag": ["Food"],
+          "id": "1"
+        }]
+      }, {
+        "horario": "9:00 am",
+        "sessoes": [{
+          "nome": "Introduction to Appcamp.io",
+          "local": "Room 2203",
+          "descricao": "Descrição",
+          "palestrantes": ["Ellie Elephant"],
+          "inicio": "9:15 am",
+          "termino": "9:30 am",
+          "tag": ["Ionic"],
+          "id": "2"
+        }, {
+          "nome": "Getting started with Ionic",
+          "local": "Room 2202",
+          "descricao": "Descrição",
+          "palestrantes": ["Ted Turtle"],
+          "inicio": "9:30 am",
+          "termino": "9:45 am",
+          "tag": ["Ionic"],
+          "id": "3"
+        }]
+      }]
+    },
+    {
+      "data": "5",
+      "grupos": [{
+        "horario": "8:00 am",
+        "sessoes": [{
+          "nome": "Breakfast",
+          "inicio": "8:00 am",
+          "termino": "9:00 am",
+          "local": "Main hallway",
+          "tag": ["Food"],
+          "id": "1"
+        }]
+      }, {
+        "horario": "9:00 am",
+        "sessoes": [{
+          "nome": "Introduction to Appcamp.io",
+          "local": "Room 2203",
+          "descricao": "Descrição",
+          "palestrantes": ["Ellie Elephant"],
+          "inicio": "9:15 am",
+          "termino": "9:30 am",
+          "tag": ["Ionic"],
+          "id": "2"
+        }, {
+          "nome": "Getting started with Ionic",
+          "local": "Room 2202",
+          "descricao": "Descrição",
+          "palestrantes": ["Ted Turtle"],
+          "inicio": "9:30 am",
+          "termino": "9:45 am",
+          "tag": ["Ionic"],
+          "id": "3"
+        }]
+      }]
+    }]
 }

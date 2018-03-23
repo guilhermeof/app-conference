@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:app_conference/model/schedules.dart';
 import 'package:app_conference/ui/common/card.dart';
@@ -15,6 +17,7 @@ class _SchedulePageState extends State<SchedulePage> with SingleTickerProviderSt
   @override
   void initState() {
     super.initState();
+    loadSchedule();
     controller = new TabController(vsync: this, length: length);
   }
 
@@ -26,7 +29,7 @@ class _SchedulePageState extends State<SchedulePage> with SingleTickerProviderSt
 
   @override
   Widget build(BuildContext context) {
-   return new Scaffold(
+    return new Scaffold(
           appBar: new AppBar(
             backgroundColor: new Color.fromRGBO(255, 22, 65, 10.0),
             title: new Text('Shchedule'.toUpperCase(), style: new TextStyle(
@@ -67,8 +70,8 @@ class _SchedulePageState extends State<SchedulePage> with SingleTickerProviderSt
                           child: new Column(
                           mainAxisSize: MainAxisSize.min,
                           children: <Widget>[
-                              new Text(schedules.id.toUpperCase()),
-                              new Text("AUG".toUpperCase())
+                              new Text(schedules.dia.toUpperCase()),
+                              new Text(schedules.mes.toUpperCase())
                             ],
                           )
                         ),
@@ -82,38 +85,19 @@ class _SchedulePageState extends State<SchedulePage> with SingleTickerProviderSt
           body: new TabBarView(
             controller: controller,
             children: schedules.map((Schedule schedule) {
-              return new ScheduleCard();
+              return new ScheduleCard(schedules: schedule.grupos,);
             }).toList(),
           ),
     );
   }
 }
 
-List<Schedule> schedules = [
-  new Schedule(
-      id: "1",
-      nome: "Palestra 1",
-      local: "Sala 202",
-      descricao: "shooow",
-      palestrantes: "Guilherme Oliveira",
-      inicio: "10:00",
-      termino: "11:00",
-      tag: "palestra"),
-  new Schedule(
-      id: "2",
-      nome: "Palestra 2",
-      local: "Sala 202",
-      descricao: "shooow",
-      palestrantes: "Guilherme Oliveira",
-      inicio: "10:00",
-      termino: "11:00",
-      tag: "palestra"),
-];
+
 
 class ScheduleCard extends StatelessWidget {
-//  ScheduleCard({ this.schedules });
+  final List<Object> schedules;
 
-//  final Schedule schedules;
+  ScheduleCard({ this.schedules });
 
   @override
   Widget build(BuildContext context) {

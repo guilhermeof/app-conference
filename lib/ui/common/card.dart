@@ -6,7 +6,7 @@ import 'package:app_conference/ui/text_style.dart';
 
 class CardSummary extends StatelessWidget {
 
-  final Schedule schedule;
+  final Data schedule;
   final bool horizontal;
 
   CardSummary(this.schedule, {this.horizontal = true});
@@ -16,32 +16,32 @@ class CardSummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final scheduleThumbnail = new Container(
       margin: new EdgeInsets.symmetric(
-          vertical: 16.0
+          vertical: 25.0,
+          horizontal: 15.0
       ),
       alignment: horizontal ? FractionalOffset.centerLeft : FractionalOffset.center,
-//      child: new Hero(
-//        tag: "schedule-hero-${schedule.id}",
-//        child: new Image(
-//          image: new NetworkImage("https://cdn.pixabay.com/photo/2016/03/31/19/57/avatar-1295406_960_720.png"),
-//          height: 92.0,
-//          width: 92.0,
-//        ),
-//      ),
+      child: new Hero(
+        tag: "schedule-hero-${schedule.nome}",
+        child: new Image(
+          image: new NetworkImage("https://avatars3.githubusercontent.com/u/19732467?s=460&v=4"),
+          height: 50.0,
+          width: 50.0,
+        ),
+      ),
     );
 
 
 
-    Widget _scheduleValue({String value, String image}) {
+    Widget _scheduleValue({String value}) {
       return new Container(
         child: new Row(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
-//              new Image.asset(image, height: 12.0),
+              new Icon(Icons.timer, size: 16.0),
               new Container(width: 8.0),
-              new Text(schedule.termino, style: Style.smallTextStyle),
+              new Text(value, style: Style.smallTextStyle),
             ]
         ),
       );
@@ -57,7 +57,7 @@ class CardSummary extends StatelessWidget {
           new Container(height: 4.0),
           new Text(schedule.nome, style: Style.titleTextStyle),
           new Container(height: 10.0),
-          new Text(schedule.local, style: Style.commonTextStyle),
+          new Text(schedule.palestrantes, style: Style.commonTextStyle),
           new Separator(),
           new Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -65,8 +65,7 @@ class CardSummary extends StatelessWidget {
               new Expanded(
                   flex: horizontal ? 1 : 0,
                   child: _scheduleValue(
-                      value: schedule.inicio,
-//                      image: 'assets/img/ic_distance.png'
+                      value: schedule.inico,
                   )
 
               ),
@@ -77,7 +76,6 @@ class CardSummary extends StatelessWidget {
                   flex: horizontal ? 1 : 0,
                   child: _scheduleValue(
                       value: schedule.termino,
-//                      image: 'assets/img/ic_gravity.png'
                   )
               )
             ],
@@ -89,19 +87,20 @@ class CardSummary extends StatelessWidget {
 
     final scheduleCard = new Container(
       child: scheduleCardContent,
+      alignment: Alignment.center,
       height: horizontal ? 124.0 : 154.0,
       margin: horizontal
-          ? new EdgeInsets.only(left: 46.0)
+          ? new EdgeInsets.only(left: 0.0)
           : new EdgeInsets.only(top: 72.0),
       decoration: new BoxDecoration(
-        color: new Color(0xFF333366),
+        color: Colors.white,
         shape: BoxShape.rectangle,
         borderRadius: new BorderRadius.circular(8.0),
         boxShadow: <BoxShadow>[
           new BoxShadow(
             color: Colors.black12,
             blurRadius: 10.0,
-            offset: new Offset(0.0, 10.0),
+            offset: new Offset(0.0, 5.0),
           ),
         ],
       ),

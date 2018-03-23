@@ -40,8 +40,7 @@ class MyTabsState extends State<MyTabs> {
       type: BottomNavigationBarType.shifting,
       onTap: (int numTab) { 
         setState(() { 
-          print("Current tab: " + numTab.toString()); 
-          currentTab = numTab; 
+          currentTab = numTab;
           currentPage = pages[numTab]; 
         });
       },

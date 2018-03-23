@@ -1,6 +1,7 @@
 {
   "schedule": [{
-    "data": "1",
+    "dia": "1",
+    "mes": "mar",
     "grupos": [{
       "horario": "8:00 am",
       "sessoes": [{
@@ -8,7 +9,7 @@
         "inicio": "8:00 am",
         "termino": "9:00 am",
         "local": "Main hallway",
-        "tag": ["Food"],
+        "tag": "Food",
         "id": "1"
       }]
     }, {
@@ -20,7 +21,7 @@
         "palestrantes": ["Ellie Elephant"],
         "inicio": "9:15 am",
         "termino": "9:30 am",
-        "tag": ["Ionic"],
+        "tag": "Ionic",
         "id": "2"
       }, {
         "nome": "Getting started with Ionic",
@@ -29,13 +30,14 @@
         "palestrantes": ["Ted Turtle"],
         "inicio": "9:30 am",
         "termino": "9:45 am",
-        "tag": ["Ionic"],
+        "tag": "Ionic",
         "id": "3"
       }]
     }]
   },
     {
-      "data": "2",
+      "dia": "2",
+      "mes": "mar",
       "grupos": [{
         "horario": "8:00 am",
         "sessoes": [{
@@ -43,7 +45,7 @@
           "inicio": "8:00 am",
           "termino": "9:00 am",
           "local": "Main hallway",
-          "tag": ["Food"],
+          "tag": "Food",
           "id": "1"
         }]
       }, {
@@ -55,7 +57,7 @@
           "palestrantes": ["Ellie Elephant"],
           "inicio": "9:15 am",
           "termino": "9:30 am",
-          "tag": ["Ionic"],
+          "tag": "Ionic",
           "id": "2"
         }, {
           "nome": "Getting started with Ionic",
@@ -64,13 +66,14 @@
           "palestrantes": ["Ted Turtle"],
           "inicio": "9:30 am",
           "termino": "9:45 am",
-          "tag": ["Ionic"],
+          "tag": "Ionic",
           "id": "3"
         }]
       }]
     },
     {
-      "data": "3",
+      "dia": "3",
+      "mes": "mar",
       "grupos": [{
         "horario": "8:00 am",
         "sessoes": [{
@@ -78,7 +81,7 @@
           "inicio": "8:00 am",
           "termino": "9:00 am",
           "local": "Main hallway",
-          "tag": ["Food"],
+          "tag": "Food",
           "id": "1"
         }]
       }, {
@@ -90,7 +93,7 @@
           "palestrantes": ["Ellie Elephant"],
           "inicio": "9:15 am",
           "termino": "9:30 am",
-          "tag": ["Ionic"],
+          "tag": "Ionic",
           "id": "2"
         }, {
           "nome": "Getting started with Ionic",
@@ -99,13 +102,14 @@
           "palestrantes": ["Ted Turtle"],
           "inicio": "9:30 am",
           "termino": "9:45 am",
-          "tag": ["Ionic"],
+          "tag": "Ionic",
           "id": "3"
         }]
       }]
     },
     {
-      "data": "4",
+      "dia": "4",
+      "mes": "mar",
       "grupos": [{
         "horario": "8:00 am",
         "sessoes": [{
@@ -113,7 +117,7 @@
           "inicio": "8:00 am",
           "termino": "9:00 am",
           "local": "Main hallway",
-          "tag": ["Food"],
+          "tag": "Food",
           "id": "1"
         }]
       }, {
@@ -125,7 +129,7 @@
           "palestrantes": ["Ellie Elephant"],
           "inicio": "9:15 am",
           "termino": "9:30 am",
-          "tag": ["Ionic"],
+          "tag": "Ionic",
           "id": "2"
         }, {
           "nome": "Getting started with Ionic",
@@ -134,13 +138,14 @@
           "palestrantes": ["Ted Turtle"],
           "inicio": "9:30 am",
           "termino": "9:45 am",
-          "tag": ["Ionic"],
+          "tag": "Ionic",
           "id": "3"
         }]
       }]
     },
     {
-      "data": "5",
+      "dia": "5",
+      "mes": "mar",
       "grupos": [{
         "horario": "8:00 am",
         "sessoes": [{
@@ -148,7 +153,7 @@
           "inicio": "8:00 am",
           "termino": "9:00 am",
           "local": "Main hallway",
-          "tag": ["Food"],
+          "tag": "Food",
           "id": "1"
         }]
       }, {
@@ -160,7 +165,7 @@
           "palestrantes": ["Ellie Elephant"],
           "inicio": "9:15 am",
           "termino": "9:30 am",
-          "tag": ["Ionic"],
+          "tag": "Ionic",
           "id": "2"
         }, {
           "nome": "Getting started with Ionic",
@@ -169,7 +174,7 @@
           "palestrantes": ["Ted Turtle"],
           "inicio": "9:30 am",
           "termino": "9:45 am",
-          "tag": ["Ionic"],
+          "tag": "Ionic",
           "id": "3"
         }]
       }]

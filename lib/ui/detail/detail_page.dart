@@ -7,7 +7,7 @@ import 'package:app_conference/ui/text_style.dart';
 
 class DetailPage extends StatelessWidget {
 
-  final Schedule schedule;
+  final Data schedule;
 
   DetailPage(this.schedule);
 
@@ -75,7 +75,7 @@ class DetailPage extends StatelessWidget {
                   style: Style.headerTextStyle,),
                 new Separator(),
                 new Text(
-                    schedule.descricao, style: Style.commonTextStyle),
+                    schedule.nome, style: Style.commonTextStyle),
               ],
             ),
           ),

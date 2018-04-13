@@ -12,13 +12,17 @@ class SchedulePage extends StatefulWidget {
 class _SchedulePageState extends State<SchedulePage> with SingleTickerProviderStateMixin {
 
   TabController controller;
-  final length = schedules.length;
+  List<Schedule> schedules = [];
 
   @override
   void initState() {
+    loadSchedule().then((List<Schedule> data) {
+      setState(() {
+        schedules = data;
+      });
+    });
+    controller = new TabController(vsync: this, length: schedules.length);
     super.initState();
-    loadSchedule();
-    controller = new TabController(vsync: this, length: length);
   }
 
   @override
@@ -57,7 +61,7 @@ class _SchedulePageState extends State<SchedulePage> with SingleTickerProviderSt
                           offset: new Offset(0.0, 0.1),
                           blurRadius: 0.1,
                         ),
-                      ], 
+                      ],
                     ),
                   controller: controller,
                   isScrollable: true,
@@ -85,7 +89,7 @@ class _SchedulePageState extends State<SchedulePage> with SingleTickerProviderSt
           body: new TabBarView(
             controller: controller,
             children: schedules.map((Schedule schedule) {
-              return new ScheduleCard(schedules: schedule.grupos,);
+              return new ScheduleCard(schedules: schedule.sessoes,);
             }).toList(),
           ),
     );

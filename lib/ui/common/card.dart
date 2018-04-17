@@ -23,7 +23,7 @@ class CardSummary extends StatelessWidget {
       ),
       alignment: horizontal ? FractionalOffset.centerLeft : FractionalOffset.center,
       child: new Hero(
-        tag: "schedule-hero-${schedule.nome}",
+        tag: "schedule-hero-${schedule.id}",
         child: new Image(
           image: new NetworkImage("https://avatars3.githubusercontent.com/u/19732467?s=460&v=4"),
           height: 50.0,
@@ -57,7 +57,7 @@ class CardSummary extends StatelessWidget {
           new Container(height: 4.0),
           new Text(schedule.nome, style: Style.titleTextStyle),
           new Container(height: 10.0),
-          new Text(schedule.palestrantes, style: Style.commonTextStyle),
+          new Text(schedule.nome, style: Style.commonTextStyle),
           new Separator(),
           new Row(
             mainAxisAlignment: MainAxisAlignment.center,

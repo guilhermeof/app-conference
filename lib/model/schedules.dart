@@ -18,6 +18,7 @@ class Data {
   final String inico;
   final String termino;
   final String tag;
+  final String id;
 
   Data(
       {
@@ -27,11 +28,12 @@ class Data {
       this.palestrantes,
       this.inico,
       this.termino,
-      this.tag});
+      this.tag,
+      this.id});
 }
 
 
-Future<String> _loadAsset() async {
+_loadAsset() async {
   return await rootBundle.loadString('assets/database/schedule_database.json');
 }
 
@@ -52,7 +54,8 @@ _parseJson(String jsonString) {
           palestrantes: item['palestrantes'],
           inico: item['inicio'],
           termino: item['termino'],
-          tag: item['tag']));
+          tag: item['tag'],
+          id: item['id']));
     });
 
     schedules.add(new Schedule(dia: day['dia'], mes: day['mes'], sessoes: datas));
@@ -67,3 +70,4 @@ Future<List<Schedule>> loadSchedule() async {
 
   return schedule;
 }
+

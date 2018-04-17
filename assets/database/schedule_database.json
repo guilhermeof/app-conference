@@ -5,15 +5,19 @@
       "mes": "mar",
       "sessoes": [
         {
-          "nome": "Breakfast",
+          "nome": "Breakfast 1",
+          "local": "Main hallway",
+          "descricao": "Descricao",
+          "palestrantes": [
+            "Ellie Elephant"
+          ],
           "inicio": "8:00 am",
           "termino": "9:00 am",
-          "local": "Main hallway",
           "tag": "Food",
           "id": "1"
         },
         {
-          "nome": "Introduction to Appcamp.io",
+          "nome": "Introduction to App 1",
           "local": "Room 2203",
           "descricao": "Descrição",
           "palestrantes": [
@@ -25,7 +29,7 @@
           "id": "2"
         },
         {
-          "nome": "Getting started with Ionic",
+          "nome": "Getting started with Ionic 1",
           "local": "Room 2202",
           "descricao": "Descrição",
           "palestrantes": [
@@ -43,15 +47,19 @@
       "mes": "mar",
       "sessoes": [
         {
-          "nome": "Breakfast",
+          "nome": "Breakfast 2",
+          "local": "Main hallway",
+          "descricao": "Descricao",
+          "palestrantes": [
+            "Ellie Elephant"
+          ],
           "inicio": "8:00 am",
           "termino": "9:00 am",
-          "local": "Main hallway",
           "tag": "Food",
-          "id": "1"
+          "id": "4"
         },
         {
-          "nome": "Introduction to Appcamp.io",
+          "nome": "Introduction to App 2",
           "local": "Room 2203",
           "descricao": "Descrição",
           "palestrantes": [
@@ -60,10 +68,10 @@
           "inicio": "9:15 am",
           "termino": "9:30 am",
           "tag": "Ionic",
-          "id": "2"
+          "id": "5"
         },
         {
-          "nome": "Getting started with Ionic",
+          "nome": "Getting started with Ionic 2",
           "local": "Room 2202",
           "descricao": "Descrição",
           "palestrantes": [
@@ -72,7 +80,7 @@
           "inicio": "9:30 am",
           "termino": "9:45 am",
           "tag": "Ionic",
-          "id": "3"
+          "id": "6"
         }
       ]
     },
@@ -81,15 +89,19 @@
       "mes": "mar",
       "sessoes": [
         {
-          "nome": "Breakfast",
+          "nome": "Breakfast 3",
+          "local": "Main hallway",
+          "descricao": "Descricao",
+          "palestrantes": [
+            "Ellie Elephant"
+          ],
           "inicio": "8:00 am",
           "termino": "9:00 am",
-          "local": "Main hallway",
           "tag": "Food",
-          "id": "1"
+          "id": "7"
         },
         {
-          "nome": "Introduction to Appcamp.io",
+          "nome": "Introduction to App 3",
           "local": "Room 2203",
           "descricao": "Descrição",
           "palestrantes": [
@@ -98,10 +110,10 @@
           "inicio": "9:15 am",
           "termino": "9:30 am",
           "tag": "Ionic",
-          "id": "2"
+          "id": "8"
         },
         {
-          "nome": "Getting started with Ionic",
+          "nome": "Getting started with Ionic 3",
           "local": "Room 2202",
           "descricao": "Descrição",
           "palestrantes": [
@@ -110,7 +122,7 @@
           "inicio": "9:30 am",
           "termino": "9:45 am",
           "tag": "Ionic",
-          "id": "3"
+          "id": "9"
         }
       ]
     },
@@ -119,15 +131,19 @@
       "mes": "mar",
       "sessoes": [
         {
-          "nome": "Breakfast",
+          "nome": "Breakfast 4",
+          "local": "Main hallway",
+          "descricao": "Descricao",
+          "palestrantes": [
+            "Ellie Elephant"
+          ],
           "inicio": "8:00 am",
           "termino": "9:00 am",
-          "local": "Main hallway",
           "tag": "Food",
-          "id": "1"
+          "id": "10"
         },
         {
-          "nome": "Introduction to Appcamp.io",
+          "nome": "Introduction to App 4",
           "local": "Room 2203",
           "descricao": "Descrição",
           "palestrantes": [
@@ -136,10 +152,10 @@
           "inicio": "9:15 am",
           "termino": "9:30 am",
           "tag": "Ionic",
-          "id": "2"
+          "id": "11"
         },
         {
-          "nome": "Getting started with Ionic",
+          "nome": "Getting started with Ionic 4",
           "local": "Room 2202",
           "descricao": "Descrição",
           "palestrantes": [
@@ -148,7 +164,7 @@
           "inicio": "9:30 am",
           "termino": "9:45 am",
           "tag": "Ionic",
-          "id": "3"
+          "id": "12"
         }
       ]
     },
@@ -157,15 +173,19 @@
       "mes": "mar",
       "sessoes": [
         {
-          "nome": "Breakfast",
+          "nome": "Breakfast 5",
+          "local": "Main hallway",
+          "descricao": "Descricao",
+          "palestrantes": [
+            "Ellie Elephant"
+          ],
           "inicio": "8:00 am",
           "termino": "9:00 am",
-          "local": "Main hallway",
           "tag": "Food",
-          "id": "1"
+          "id": "13"
         },
         {
-          "nome": "Introduction to Appcamp.io",
+          "nome": "Introduction to App 5",
           "local": "Room 2203",
           "descricao": "Descrição",
           "palestrantes": [
@@ -174,10 +194,10 @@
           "inicio": "9:15 am",
           "termino": "9:30 am",
           "tag": "Ionic",
-          "id": "2"
+          "id": "14"
         },
         {
-          "nome": "Getting started with Ionic",
+          "nome": "Getting started with Ionic 5",
           "local": "Room 2202",
           "descricao": "Descrição",
           "palestrantes": [
@@ -186,7 +206,7 @@
           "inicio": "9:30 am",
           "termino": "9:45 am",
           "tag": "Ionic",
-          "id": "3"
+          "id": "15"
         }
       ]
     }

@@ -1,8 +1,6 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:app_conference/model/schedules.dart';
-import 'package:app_conference/ui/common/card.dart';
+import 'package:app_conference/pages/schedule/schedule_card.dart';
 
 class SchedulePage extends StatefulWidget {
   @override
@@ -12,17 +10,19 @@ class SchedulePage extends StatefulWidget {
 class _SchedulePageState extends State<SchedulePage> with SingleTickerProviderStateMixin {
 
   TabController controller;
-  List<Schedule> schedules = [];
+  List<Schedule> schedules;
 
   @override
   void initState() {
-    loadSchedule().then((List<Schedule> data) {
-      setState(() {
-        schedules = data;
+    super.initState();
+    loadSchedule().then((result) {
+      this.setState(() {
+        schedules = result;
+        if(schedules != null) {
+          controller = new TabController(vsync: this, length: schedules.length);
+        }
       });
     });
-    controller = new TabController(vsync: this, length: schedules.length);
-    super.initState();
   }
 
   @override
@@ -33,6 +33,33 @@ class _SchedulePageState extends State<SchedulePage> with SingleTickerProviderSt
 
   @override
   Widget build(BuildContext context) {
+    if (schedules == null) {
+      return new Scaffold(
+        appBar: new AppBar(
+          backgroundColor: new Color.fromRGBO(255, 22, 65, 10.0),
+          title: new Text('Shchedule'.toUpperCase(), style: new TextStyle(
+            letterSpacing: 8.0,
+          ),
+          ),
+          centerTitle: true,
+        ),
+        body: new Container(
+          child: new Center(
+            child: new Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                new Icon(Icons.event_busy, size: 100.0, color: Colors.grey,),
+                new Text("Sem programações", style: new TextStyle(
+                    fontSize: 30.0,
+                    color: Colors.grey
+                ),)
+              ],
+            ),
+          ),
+        ),
+      );
+    }
+
     return new Scaffold(
           appBar: new AppBar(
             backgroundColor: new Color.fromRGBO(255, 22, 65, 10.0),
@@ -92,39 +119,6 @@ class _SchedulePageState extends State<SchedulePage> with SingleTickerProviderSt
               return new ScheduleCard(schedules: schedule.sessoes,);
             }).toList(),
           ),
-    );
-  }
-}
-
-
-
-class ScheduleCard extends StatelessWidget {
-  final List<Object> schedules;
-
-  ScheduleCard({ this.schedules });
-
-  @override
-  Widget build(BuildContext context) {
-    final TextStyle textStyle = Theme.of(context).textTheme.display1;
-    return new Container(
-      child: new Container(
-//        color: new Color(0xFF736AB7),
-        child: new CustomScrollView(
-          scrollDirection: Axis.vertical,
-          shrinkWrap: false,
-          slivers: <Widget>[
-            new SliverPadding(
-              padding: const EdgeInsets.symmetric(vertical: 24.0),
-              sliver: new SliverList(
-                delegate: new SliverChildBuilderDelegate(
-                      (context, index) => new CardSummary(schedules[index]),
-                  childCount: schedules.length,
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
     );
   }
 }
